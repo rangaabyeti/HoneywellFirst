@@ -29,6 +29,12 @@ namespace xCodedUI.AppFramework.Pages
         private xHtmlDiv _successmsg;
         private xHtmlDiv _workorderPage;
         private xHtmlSpan _errormsgName;
+        private xHtmlHyperlink _workOrderNameFilterhyl;
+        private xHtmlEdit _workOrderNametxt;
+        private xHtmlButton _filterbtn;
+        private xHtmlButton _clearbtn;
+
+        private xHtmlTableCell _workOrderName;
         
        
        
@@ -49,6 +55,11 @@ namespace xCodedUI.AppFramework.Pages
             _Addbtn = new xHtmlInputButton(b, "btnAdd");
             _successmsg = new xHtmlDiv(b, "success", "Class");
             _errormsgName = new xHtmlSpan(b, "WorkOrderName_validationMessage");
+            _workOrderNameFilterhyl = new xHtmlHyperlink(b, "14", "TagInstance");
+            _workOrderNametxt = new xHtmlEdit(b, "SINGLELINE","Type");
+            _filterbtn = new xHtmlButton(b, "Filter","DisplayText");
+            _clearbtn = new xHtmlButton(b, "reset", "Type");           
+            _workOrderName = new xHtmlTableCell(b, "1", "TagInstance");
         }
 
         /// <summary>
@@ -169,5 +180,28 @@ namespace xCodedUI.AppFramework.Pages
             res = _errormsgName.GetProperty("FriendlyName").ToString();
             return res;
         }
+
+        public void filterByWorkOrderName(string name)
+        {
+            _workOrderNameFilterhyl.Click();
+            _workOrderNametxt.SetProperty("Text", name);
+            _filterbtn.Click();
+        }
+
+        public void removeFilterByWorkOrderName()
+        {
+            _workOrderNameFilterhyl.Click();
+            _clearbtn.Click();
+        }
+        public Boolean work(string name)
+        {
+            string res;
+            Boolean flag = false;
+            res = _workOrderName.GetProperty("InnerText").ToString();
+            if (res.Contains(name))
+                flag = true;
+            return flag;
+        }
+       
     }
 }

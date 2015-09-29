@@ -203,6 +203,28 @@ namespace xCodedUI.AppFramework
              w.nav_Home();
          }
 
+        //[TestMethod]
+        //public void filter()
+        // {
+        //     string name = "mytest313";
+        //     Boolean res;
+        //     window = BrowserWindow.Locate("Work Order");
+        //     window.CloseOnPlaybackCleanup = false;
+        //     w = new WorkOrderPage(window);
+        //     w.filterByWorkOrderName(name);
+        //     Playback.Wait(10000);
+        //     res = w.work(name);
+        //     Assert.AreEqual(res,true);
+        //     w.removeFilterByWorkOrderName();
+
+        //     //post Condtion
+        //     window = BrowserWindow.Locate("Work Order");
+        //     window.CloseOnPlaybackCleanup = false;
+        //     w = new WorkOrderPage(window);
+        //     w.nav_Home();
+             
+        // }
+
         /// <summary>
         /// Logoff Test Method
         /// </summary>

@@ -52,6 +52,7 @@
     <Compile Include="WebControls\xHtmlComboBox.cs" />
     <Compile Include="WebControls\xHtmlCheckBox.cs" />
     <Compile Include="WebControls\HtmlButton.cs" />
+    <Compile Include="WebControls\xHtmlTableCell.cs" />
     <Compile Include="WebControls\xHtmlTextArea.cs" />
     <Compile Include="WebControls\xHtmlTable.cs" />
     <Compile Include="WebControls\xHtmlSpan.cs" />
